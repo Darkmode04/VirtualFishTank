@@ -3,7 +3,37 @@ using UnityEngine.UIElements;
 
 public class Boid : MonoBehaviour
 {
-    public Rigidbody rigidbody;
+
+    public GameObject targetObjest;
+    private Rigidbody Rigidbody;
+
+    public float speedMax = 2;
+    public float accelMax = 3;
+
+    private void Start()
+    {
+        targetObjest = GameObject.Find("Target");
+        Rigidbody = GetComponent<Rigidbody>();
+    }
+
+    private void FixedUpdate()
+    {
+      
+       Vector3 toTarget = targetObjest.transform.position - transform.position;
+
+        Vector3 toTargetNormalized = toTarget.normalized;
+
+        Vector3 acceleration = toTargetNormalized * accelMax;
+
+        Rigidbody.linearVelocity += acceleration * Time.fixedDeltaTime;
+
+        Rigidbody.linearVelocity = Vector3.ClampMagnitude(Rigidbody.linearVelocity, speedMax);
+
+        transform.forward = Rigidbody.linearVelocity;
+    }
+
+
+    public new Rigidbody rigidbody;
     private void Awake()
     {
         rigidbody = GetComponent<Rigidbody>();
@@ -18,13 +48,10 @@ public class Boid : MonoBehaviour
 
     }
 
+
     public void AlignToVelocity()
     {
-        Vector3 velocity = rigidbody.linearVelocity;
-        Vector3 forward = transform.forward;
-        float angle = Vector3.SignedAngle(forward, velocity, Vector3.up);
-        Quaternion targetRotation = Quaternion.Euler(0, angle, 0);
-        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 5f);
+      
 
 
     }
