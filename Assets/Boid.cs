@@ -52,7 +52,7 @@ public class Boid : MonoBehaviour
     public void AlignToVelocity()
     {
       
-
+        transform.forward = Vector3.RotateTowards(transform.forward, rigidbody.linearVelocity.normalized, Mathf.Deg2Rad * 1800 * Time.deltaTime,100);
 
     }
 }
