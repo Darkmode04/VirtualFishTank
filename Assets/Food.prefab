@@ -12,11 +12,11 @@ GameObject:
   - component: {fileID: 429780204862438422}
   - component: {fileID: 1239059139712707786}
   - component: {fileID: 3788766131298278769}
-  - component: {fileID: 40056478595269440}
   - component: {fileID: 2785997970285736149}
   - component: {fileID: 6271386882024004451}
   - component: {fileID: 7963784132381945811}
-  m_Layer: 2
+  - component: {fileID: 33330633581407139}
+  m_Layer: 0
   m_Name: Food
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -112,18 +112,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &40056478595269440
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2851859587008556783}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7932dd1448a7e0a40a5e3ee54e46b4c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!54 &2785997970285736149
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5067,3 +5055,15 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!114 &33330633581407139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2851859587008556783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7932dd1448a7e0a40a5e3ee54e46b4c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
