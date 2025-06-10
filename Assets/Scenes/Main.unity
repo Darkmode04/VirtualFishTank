@@ -269,8 +269,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2e380c7bc740e6418c72d27d7d4b787, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetObjest: {fileID: 0}
+  targetObject: {fileID: 0}
   boidPrefab: {fileID: 676342791721572840, guid: f897bb6f1e1ca6e488704ea6543a2907, type: 3}
+  foodPrefab: {fileID: 2851859587008556783, guid: 5540831f9bd2a0444bc7c46becba06b7, type: 3}
   boidToSpawn: 10
   boids: []
   controlMode: 0
@@ -819,9 +820,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7932dd1448a7e0a40a5e3ee54e46b4c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  foodPrefab: {fileID: 2851859587008556783, guid: 5540831f9bd2a0444bc7c46becba06b7, type: 3}
-  targetObject: {fileID: 1457420762}
-  BoidSimulationControl: {fileID: 330585548}
 --- !u!1001 &1638789863
 PrefabInstance:
   m_ObjectHideFlags: 0
